@@ -1,0 +1,183 @@
+:root {
+    --width: 250px;
+    --height: calc(var(--width) / 2);
+}
+
+body {
+    background-color: #ef3e3e;
+    margin: 0;
+    padding: 0;
+}
+
+.background_espera{
+    background-color: rgb(15, 3, 3);
+    height: 100vh;
+}
+
+.containerPokemons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 2rem;
+
+
+}
+
+.listPokemons {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-family: "Quantico", sans-serif;
+    color: #ebebeb;
+}
+
+.item_pokemon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #292929;
+    padding: .5rem;
+    gap: 7rem;
+    flex-wrap: wrap;
+    border-radius: .5rem;
+    font-weight: bold;
+    word-spacing: .5rem;
+    border: 1px solid #161616;
+
+}
+
+.img_item {
+    min-width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+}
+
+.item_pokemon:hover {
+    background-color: #383838e5;
+    border: 2px groove #161616;
+    cursor: pointer;
+    transition: all .7s ease;
+}
+
+/* pokemon detallado */
+.search {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+   
+}
+
+#idsearch {
+    border-radius: .3rem;
+    width: 24vw;
+    padding: .5rem;
+    background: #aa2525;
+    border: 1px solid salmon;
+}
+
+.lupa {
+    font-size: 1.5rem;
+    color: #ebebeb;
+}
+
+.containerDetalles {
+    display: flex;
+    flex-direction: column;
+}
+
+.icono_img {
+    width: 4rem;
+    padding-left: 1rem;
+}
+
+.divTypes {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.itemPokemonDetalle {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: "Quantico", sans-serif;
+    color: #ebebeb;
+    position: fixed;
+    top: 4rem;
+
+}
+
+.titlePokemon {
+    margin: 0;
+}
+
+.types {
+    margin: 1rem;
+}
+
+.itemPokemonDetalle>ul {
+    margin: 0;
+    padding: 0;
+}
+
+.spanId {
+
+    position: relative;
+    top: 1rem;
+}
+
+.imgFull {
+    
+    width: 25rem;
+    height: 20rem;
+}
+
+/*animation*/
+@keyframes bounce {
+    0% {
+        top: 40rem;
+        background-color: rgb(26, 94, 94);
+    }
+
+    48% {}
+
+    50% {
+        top: calc(100% - var(--height));
+        background-color: #093510;
+    }
+
+    52% {}
+
+    100% {
+        top: 0;
+        background: rgb(16, 16, 107);
+    }
+}
+
+@keyframes toRight {
+
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: calc(100% - var(--width));
+    }
+}
+
+/* loading */
+.loading {
+    text-align: center;
+    color: #ebebeb;
+    border: 2px groove black;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 20;
+    width: 15rem;
+    left: 31rem;
+    animation: toRight linear 6.8s infinite alternate, bounce linear 17s infinite alternate;
+
+
+}
